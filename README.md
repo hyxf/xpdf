@@ -11,6 +11,11 @@ This project provides a CLI and a web-based API service for converting Markdown 
 - FastAPI-based web service with RESTful API.
 
 ## Installation
+
+```sh
+pip install xpdf
+```
+
 To install the required dependencies, use:
 ```sh
 pip install -r requirements.txt
