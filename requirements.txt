@@ -1,0 +1,10 @@
+click
+types-click
+markdown
+weasyprint
+pygments
+fastapi
+python-multipart
+uvicorn
+pydantic
+pydantic-settings

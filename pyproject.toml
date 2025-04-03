@@ -1,0 +1,43 @@
+[project]
+name = "xpdf"
+description = "markdown to pdf"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT License" }
+authors = [{ name = "Seven", email = "1162584980@qq.com" }]
+maintainers = [{ name = "Seven", email = "1162584980@qq.com" }]
+dynamic = ["version", "dependencies"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console :: Curses",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[project.scripts]
+topdf = 'topdf.cmdline:convert'
+spdf = 'topdf.server:serve'
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = { attr = "topdf.__VERSION__" }
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.packages.find]
+include = ["topdf*"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"topdf" = ["templates/*", "static/**/*"]
+
+[tool.black]
+line-length = 120
