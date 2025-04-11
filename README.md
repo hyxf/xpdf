@@ -78,6 +78,7 @@ By default, the server runs on `http://127.0.0.1:8882/`.
 - `Click` for the CLI interface.
 - `FastAPI` and `Uvicorn` for the web service.
 - `MarkdownConverter` for conversion logic.
+- `emoji` https://github.com/googlefonts/noto-emoji
 
 ## License
 This project is licensed under the MIT License.
